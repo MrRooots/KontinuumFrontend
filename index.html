@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- PAGE TITLE -->
+  <title>Kontinuum | Login</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbarContainer">
+        <!-- LOGO -->
+        <div class="logoContainer">
+          <img src="./img/logo.png" alt="logo">
+        </div>
+        
+        <!-- COURSES SELECTOR -->
+        <ul class="courseContainer">
+          <li><a href="#">Курсы ЕГЭ</a></li>
+          <li><a href="#">Курсы ОГЭ</a></li>
+        </ul>
+
+        <!-- LOGIN BUTTON -->
+        <div class="buttonContainer">
+          <a href="#">Войти</a>
+        </div>
+        
+        <!-- HAMBURGER MENU -->
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+          <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><a href="">Курсы ЕГЭ</a> </li>
+          <li><a href="">Курсы ОГЭ</a> </li>
+          <li><a href="">Войти</a> </li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- LOGIN FORM -->
+  <section class="login">
+    <!-- FORM TITLE -->
+    <h1 class="formTitle">Вход в личный кабинет</h1>
+
+    <form class="loginForm" method="post" onsubmit="return validateForm()">
+      <!-- PHONE NUMBER -->
+      <input type="tel" id="phoneNumber" class="phoneInput" placeholder="Телефон (+7 (xxx) xxx-xx-xx)"
+        onkeyup="phoneNumberFormatter(); validatePhoneNumber()" required>
+
+      <!-- PASSWORD -->
+      <input type="password" id="password" class="passwordInput" placeholder="Пароль" onkeyup="validatePassword()">
+
+      <!-- STUDENT INITIALS -->
+      <input type="text" id="student" class="nameInput --Hidden" placeholder="Имя и фамилия ученика"
+        onkeyup="validateStudent()">
+
+      <!-- HIDDEN FIELD -->
+      <input type="text" class="hiddenInput" style="display: none;" value="1">
+
+      <!-- FORM ERRORS WILL APPEAR IN THIS PARAGRAPH -->
+      <p id="validationContainerErrors"></p>
+
+      <!-- SUBMIT BUTTON -->
+      <button class="submitFormButton" type="submit">Войти</button>
+
+      <!-- FIELD SWAPPER -->
+      <a href="#" class="formRemember" onclick="onFormLinkClick()">Я забыл пароль</a>
+    </form>
+  </section>
+</body>
+
+<!-- SCRIPT { PURE JS } -->
+<script src="./scripts/script.js"></script>
+
+</html>

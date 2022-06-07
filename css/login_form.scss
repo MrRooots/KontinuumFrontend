@@ -1,0 +1,85 @@
+// Login Form
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+
+  align-items: center;
+  justify-content: center;
+
+  .formTitle {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 412px;
+      height: 64px;
+      padding: 30px 6px;
+      font-size: 24px;
+
+      border: #8B8B8B solid 1px;
+      outline: none;
+
+      &::placeholder {
+        color: $grey;
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+
+    .phoneInput {
+      border-radius: 10px 10px 0 0;
+      border-bottom: none;
+    }
+
+    .passwordInput {
+      border-radius: 0 0 10px 10px;
+    }
+
+    .nameInput {
+      border-radius: 0 0 10px 10px;
+    }
+
+    #validationContainerErrors {
+      color: $darkOrangeColor;
+      padding-top: 10px;
+      text-align: center;
+      font-size: 18px;
+      width: 412px;
+    }
+
+    .--Hidden {
+      display: none;
+    }
+
+    .submitFormButton {
+      margin: 10px 0 20px 0;
+      padding: 20px 166px;
+
+      color: $white;
+      font-size: 24px;
+      font-weight: 600;
+
+      border: none;
+      border-radius: 10px;
+
+      background-color: $orangeColor;
+
+      &:hover {
+        background-color: $darkOrangeColor;
+        transition: .7s;
+      }
+    }
+
+    .formRemember {
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
+}

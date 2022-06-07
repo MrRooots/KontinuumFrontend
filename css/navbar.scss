@@ -1,0 +1,57 @@
+// Navbar
+.header {
+  background-color: $white;
+
+  .navbar {
+    padding: 0 100px;
+
+    .navbarContainer {
+      height: 100px;
+      display: grid;
+      grid-template-columns: .5fr .5fr 1fr;
+      grid-gap: 40px;
+      align-items: center;
+
+      .courseContainer {
+        display: flex;
+        grid-gap: 40px;
+        justify-content: start;
+
+        li {
+          width: 130px;
+          padding: 37px 10px;
+          border-bottom: transparent solid 3px;
+
+          &:hover {
+            border-bottom: $grey solid 3px;
+          }
+        }
+      }
+
+      // Hide hamburger menu
+      #menu-toggle,
+      .menu-button-container,
+      .menu {
+        display: none;
+        overflow: hidden;
+      }
+
+      .buttonContainer {
+        justify-self: end;
+
+        a {
+          color: $orangeColor;
+          padding: 10px 55px;
+          border: $orangeColor solid 2px;
+          border-radius: 24px;
+
+          &:hover {
+            color: $white;
+            background-color: $orangeColor;
+            transition: .7s;
+          }
+        }
+      }
+    }
+  }
+}

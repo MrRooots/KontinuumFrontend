@@ -1,0 +1,14 @@
+// Colors
+@import 'colors';
+
+// Initial configurations
+@import 'initial_setup';
+
+// Header navigation bar
+@import 'navbar';
+
+// Login form
+@import 'login_form';
+
+// Styles for small screen devices (<= 992px)
+@import "./small_screen/small_screen";

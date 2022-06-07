@@ -1,0 +1,12 @@
+// Mobile devices styles
+@media screen and (max-width: 992px) {
+  a {
+    font-size: 16px;
+  }
+
+  // Header navigation bar for small screens
+  @import 'small_navbar';
+
+  // Login form for small screens
+  @import 'small_login_form';
+}
